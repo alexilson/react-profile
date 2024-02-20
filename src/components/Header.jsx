@@ -1,39 +1,24 @@
-function Header({ currentPage, pageChange }) {
+import { Link } from 'react-router-dom'; 
+import Navigation from './Navigation';
+
+function Header() {
     return (
-        <ul>
-            <li>
-                <a href="#about"
-                onClick={() => pageChange('About')}
-                className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
-                >
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="#contact"
-                onClick={() => pageChange('Contact')}
-                className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
-                >
+        <Navigation
+            links={[
+                <Link key={1} to="/about">
+                    About
+                </Link>,
+                <Link key={2} to="/contact">
                     Contact
-                </a>
-            </li>
-            <li>
-                <a href="#portfolio"
-                onClick={() => pageChange('Portfolio')}
-                className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
-                >
+                </Link>,
+                <Link key={3} to="/portfolio">
                     Portfolio
-                </a>
-            </li>
-            <li>
-                <a href="#resume"
-                onClick={() => pageChange('Resume')}
-                className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
-                >
+                </Link>,
+                <Link key={4} to="/resume">
                     Resume
-                </a>
-            </li>
-        </ul>
+                </Link>
+            ]}
+        />
     )
 }
 
