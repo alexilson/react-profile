@@ -5,6 +5,7 @@ function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
     
     function handleInputChange(e) {
         const { target } = e;
@@ -16,6 +17,12 @@ function Contact() {
                 setMessage(inputValue)
             )
         )
+
+        if (!inputValue) {
+            // return console.log("You must enter a", inputType)
+            return setErrorMessage(`You must enter something into the ${inputType} field.`)
+        }
+
     }
 
     const handleFormSubmit = (e) => {
@@ -26,6 +33,7 @@ function Contact() {
         setName('');
         setEmail('');
         setMessage('');
+        setErrorMessage('');
     }
 
     return (
@@ -39,6 +47,7 @@ function Contact() {
                     type="text"
                     placeholder="Name"
                     required={true}
+                    onBlur={handleInputChange}
                 />
                 <input
                     value={email}
@@ -47,6 +56,7 @@ function Contact() {
                     type="email"
                     placeholder="Email"
                     required={true}
+                    onBlur={handleInputChange}
                 />
                 <textarea
                     value={message}
@@ -54,10 +64,15 @@ function Contact() {
                     onChange={handleInputChange}
                     placeholder="Message"
                     required={true}
+                    onBlur={handleInputChange}
                 />
                 <button type="submit">Submit</button>
             </form>
-
+            {errorMessage && (
+                <div>
+                    <alert>{errorMessage}</alert>
+                </div>
+            )}
         </div>
     );
 
