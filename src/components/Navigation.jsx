@@ -1,8 +1,7 @@
 export default function Navigation({ links }) {
-    console.log(links)
     return (
         <ul>
-            {links.map((link) => <li key={link.id}> {link} </li>)}
+            {links.map((link) => <li key={link.key}> {link} </li>)}
         </ul>
     );
 }

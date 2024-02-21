@@ -19,7 +19,6 @@ function Contact() {
         )
 
         if (!inputValue) {
-            // return console.log("You must enter a", inputType)
             return setErrorMessage(`You must enter something into the ${inputType} field.`)
         }
 
