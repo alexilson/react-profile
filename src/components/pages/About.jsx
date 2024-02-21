@@ -6,6 +6,7 @@ function About() {
             <h2>
                 I am a programmer named Alex Ilson.
             </h2>
+            <img src="/omg3.jpg"></img>
             <p>
                 I have completed the University of Texas at Austin 6 month Full Stack Web Development bootcamp in March 2024. I have been working in technology since 2007.
             </p>
