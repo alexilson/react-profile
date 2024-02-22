@@ -14,7 +14,7 @@ function About() {
                 It was very fun and rewarding, though challenging.
             </p>
             <p>
-                I learned HTML, CSS, Javascript, Node, Express, MySQL, Handlebars, Sequelize, Object Oriented Programming, Jest, Model-View-Controller, MongoDB, Mongoose, React, MERN.
+                I learned HTML, CSS, Javascript, Node, Express, MySQL, Handlebars, ChatGPT, Sequelize, Object Oriented Programming, Jest, Model-View-Controller, MongoDB, Mongoose, React, GraphQL,the  MERN stack.
             </p>
             <p>
                 I also have experience with Python, Flask, Ginja, Pandas, Microsoft SQL, Excel, VBA, MicroStrategy, Power Automate, PowerBI.
